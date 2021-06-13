@@ -48,6 +48,8 @@ service unified-script /system/bin/unified-script.sh
 on boot
     chmod 0777 /system/bin/unified-script.sh
     start unified-script
+    #start health-hal-2-1
+    setprop sys.usb.config adb
 
 service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
     user root
