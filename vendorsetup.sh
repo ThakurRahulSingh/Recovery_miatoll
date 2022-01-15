@@ -43,8 +43,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export OF_USE_GREEN_LED=0
 	export OF_HIDE_NOTCH=1
-	export OF_USE_MAGISKBOOT=1
-	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
@@ -59,7 +57,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_PATCH_AVB20=1
         export FOX_DELETE_AROMAFM=1
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
-        # export FOX_ENABLE_APP_MANAGER=1
 
         # OTA
         export OF_KEEP_DM_VERITY=1
@@ -75,7 +72,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_CLOCK_POS=1
 
 	# maximum permissible splash image size (in kilobytes); do *NOT* increase!
-	export OF_SPLASH_MAX_SIZE=104
+	export OF_SPLASH_MAX_SIZE=130
 
 	# run a process after formatting data to recreate /data/media/0 (only when forced-encryption is being disabled)
 	export OF_RUN_POST_FORMAT_PROCESS=1
