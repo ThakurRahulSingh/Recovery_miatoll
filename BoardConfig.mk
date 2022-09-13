@@ -46,6 +46,9 @@ TARGET_BOARD_PLATFORM := atoll
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
 QCOM_BOARD_PLATFORMS += atoll
 
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := curtana,excalibur,gram,joyeuse
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 	androidboot.hardware=qcom \
