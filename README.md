@@ -17,7 +17,7 @@
 
 ## Device image
 
-![Redmi Note 9S](https://camo.githubusercontent.com/ffd6c3fbdcb8e4cc6ed9ad884b32a9d5009d307a8bae29e760019f8457e8fcf5/68747470733a2f2f63646e2d66696c65732e6b696d6f76696c2e636f6d2f64656661756c742f303030342f33362f7468756d625f3333353731385f64656661756c745f6269672e6a706567 "Redmi Note 9S")
+![Redmi Note 9S](#)
 
 ---
 ## Kernel (FBE v1)
