@@ -24,6 +24,9 @@ TW_USE_FSCRYPT_POLICY := 1
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# device asserts
+TARGET_OTA_ASSERT_DEVICE := miatoll,curtana,excalibur,gram,joyeuse
+
 # Exclude Apex
 TW_EXCLUDE_APEX := true
 
