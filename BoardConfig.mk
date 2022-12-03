@@ -128,6 +128,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 
+#TARGET_USES_64_BIT_BINDER := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_IS_64_BIT := true
+
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
