@@ -34,6 +34,7 @@ ENABLE_SCHEDBOOST := true
 
 # 64-bit
 TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_IS_64_BIT := true
 
 # Bootloader
 PRODUCT_PLATFORM := atoll
@@ -84,10 +85,9 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # --- prebuilt kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/MIUI
-TARGET_PREBUILT_DTB := $(KERNEL_DIRECTORY)/dtb
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_DIRECTORY)/dtbo
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt
 
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -151,6 +151,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_SCREEN_BLANK := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_EXCLUDE_APEX := true
 
 # additions that are required for the 11.0 build manifest
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
@@ -161,6 +163,13 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 TARGET_COPY_OUT_PRODUCT := product
 TW_INCLUDE_RESETPROP := true
+
+# PBRP specific build flags
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_DEVICE_RATIO := "20:9"
+
 # cure for "ELF binaries" problems
 #BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
