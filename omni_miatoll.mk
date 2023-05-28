@@ -31,14 +31,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := miatoll
-PRODUCT_NAME := twrp_miatoll
+PRODUCT_NAME := omni_miatoll
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 9S
 PRODUCT_MANUFACTURER := Xiaomi
