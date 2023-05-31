@@ -53,9 +53,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery
 
-# OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
 
 # for Android 11 manifests
 PRODUCT_SOONG_NAMESPACES += \
