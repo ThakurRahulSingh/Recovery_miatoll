@@ -46,7 +46,6 @@ TARGET_USES_UEFI := true
 TARGET_BOARD_PLATFORM := atoll
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
 QCOM_BOARD_PLATFORMS := atoll
-BOARD_USES_QCOM_HARDWARE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
@@ -84,9 +83,9 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := miatoll_defconfig
+TARGET_KERNEL_CONFIG := vendor/curtana-fox_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/miatoll
+BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -129,6 +128,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Workaround for error copying vendor files to recovery ramdisk
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
@@ -137,7 +138,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-#TARGET_USES_64_BIT_BINDER := true
 TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_IS_64_BIT := true
 
@@ -181,10 +181,4 @@ TW_INCLUDE_RESETPROP := true
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# cure for "ELF binaries" problems
-#BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-# deal with "error: overriding commands for target" problems
-#BUILD_BROKEN_DUP_RULES := true
-
-#
