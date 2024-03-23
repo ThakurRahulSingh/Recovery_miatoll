@@ -2,7 +2,6 @@
 /system_ext     ext4     system_ext                                 flags=display=system_ext;logical
 /vendor         ext4     vendor                                     flags=display=vendor;logical
 /product        ext4     product                                    flags=display=product;logical
-/mi_ext         ext4     mi_ext                                     flags=display=mi_ext;logical
 /cache          ext4     /dev/block/bootdevice/by-name/cache        flags=display=cache
 /metadata       ext4     /dev/block/bootdevice/by-name/metadata     flags=display=metadata
 /data           f2fs     /dev/block/bootdevice/by-name/userdata     flags=display=data
