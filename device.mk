@@ -27,7 +27,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_OTA_PARTITIONS += \
     system \
     system_ext \
-    mi_ext \
     product \
     vendor \
     boot \
