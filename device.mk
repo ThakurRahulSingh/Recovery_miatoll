@@ -24,17 +24,6 @@ TW_USE_FSCRYPT_POLICY := 1
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-TARGET_OTA_PARTITIONS += \
-    system \
-    system_ext \
-    product \
-    vendor \
-    boot \
-    dtbo \
-    vbmeta \
-    persist \
-    recovery
-
 # device asserts
 TARGET_OTA_ASSERT_DEVICE := miatoll,curtana,excalibur,gram,joyeuse
 
