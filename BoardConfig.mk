@@ -59,8 +59,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 	androidboot.usbcontroller=a600000.dwc3 \
 	swiotlb=2048 \
 	cgroup.memory=nokmem,nosocket \
-	androidboot.selinux=permissive \
-	androidboot.init_fatal_reboot_target=recovery
+	androidboot.selinux=permissive
 
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
@@ -83,7 +82,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_CONFIG := miatoll_defconfig
+TARGET_KERNEL_CONFIG := vendor/curtana-fox_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/miatoll
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
