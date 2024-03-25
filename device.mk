@@ -31,7 +31,6 @@ TARGET_OTA_PARTITIONS += \
     vendor \
     boot \
     dtbo \
-    super \
     vbmeta \
     persist \
     recovery
